@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by tymwits</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+<script src="https://static.tumblr.com/2pnwama/DLppehqvd/feathericons.js"></script>
+
+<!-------MUSIC PLAYER BY GLENTHEMES------->
+<script src="//glenthemes.github.io/-music-/glenplayer06.js"></script> 
+
+
+    
+
+    <!-- general stuff -->
+    <title>nashe</title>
+    <meta name="description" content="Thanks for viewing oxygen, a tumblr theme by xuethms. It features console- and gaming-inspired design elements." />
+
+
+
+    <link rel="shortcut icon" "https://64.media.tumblr.com/0a509b1d30712e1fd23c2f3fa6aeaa72/4c992df1a892efcf-2d/s128x128u_c1/d4ec00d29acfc5db718bfffd8712c9ad2e0c7d8d.pnj" />
+
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito&family=Open+Sans&family=Ubuntu&family=VT323&display=swap" rel="stylesheet">
+
+
+    <!-- cappuccicons by suiomi -->
+    <!-- https://cappuccicons.com/ -->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+
+
+    <!-- tooltips -->
+    <!-- https://manos.malihu.gr/style-my-tooltips-jquery-plugin/ -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $("a[title]").style_my_tooltips({
+                    tip_follows_cursor: true,
+                    tip_delay_time: 0,
+                    tip_fade_speed: 300,
+                    attribute: "title"
+                });
+            });
+        })(jQuery);
+    </script>
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#btn-info").click(function() {
+                $(".content").toggleClass("content-hide");
+                $(".userprofile").toggleClass("userprofile-show");
+                $(".sbf-fol").toggleClass("sbf-fol-active");
+            });
+
+            $("#w1-prof").click(function() {
+                $(".w1-prof-tab").addClass("w1-tab-active");
+                $(".w1-bio-tab").removeClass("w1-tab-active");
+                $(".w1-todo-tab").removeClass("w1-tab-active");
+                $(".w1p-bio").addClass("w1p-hide");
+                $(".w1p-todo").addClass("w1p-hide");
+                $(".w1p-prof").removeClass("w1p-hide");
+            });
+
+            $("#w1-bio").click(function() {
+                $(".w1-prof-tab").removeClass("w1-tab-active");
+                $(".w1-bio-tab").addClass("w1-tab-active");
+                $(".w1-todo-tab").removeClass("w1-tab-active");
+                $(".w1p-bio").removeClass("w1p-hide");
+                $(".w1p-todo").addClass("w1p-hide");
+                $(".w1p-prof").addClass("w1p-hide");
+            });
+
+            $("#w1-todo").click(function() {
+                $(".w1-prof-tab").removeClass("w1-tab-active");
+                $(".w1-bio-tab").removeClass("w1-tab-active");
+                $(".w1-todo-tab").addClass("w1-tab-active");
+                $(".w1p-bio").addClass("w1p-hide");
+                $(".w1p-todo").removeClass("w1p-hide");
+                $(".w1p-prof").addClass("w1p-hide");
+            });
+
+        }); /** jquery the end **/
+    </script>
+
+
+    <!-- photosets.css script -->
+    <!-- credit to annasthms & eggdesign -->
+    <!-- https://annasthms.github.io/photosets/ -->
+    <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+    <script>
+        function gatherData(images, arr) {
+            for (let i = 0; i < images.length; i++) {
+                let currentData = {
+                    "width": images[i].getAttribute('data-width'),
+                    "height": images[i].getAttribute('data-height'),
+                    "low_res": images[i].getAttribute('data-lowres'),
+                    "high_res": images[i].getAttribute('data-highres')
+                };
+                arr.push(currentData);
+            }
+        }
+
+        function getIndex(elem) {
+            let i = 0;
+            while ((elem = elem.previousElementSibling) != null) i++;
+            return i;
+        }
+
+        function lightbox(elem) {
+            let currentPhotoset = elem.parentNode;
+            let photosetPhotos = currentPhotoset.getElementsByTagName('div');
+            let data = [];
+            gatherData(photosetPhotos, data);
+            Tumblr.Lightbox.init(data, getIndex(elem) + 1);
+        }
+    </script>
+
+
+    <!--
+        NPF images fix v3.0 by @glenthemes [2021]
+        💌 git.io/JRBt7
+--->
+    <script src="//npf-images-v3.github.io/script.js"></script>
+    <link rel="stylesheet" href="//npf-images-v3.github.io/recon.css">
+
+
+    <!-- feathericons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+
+    <!-- customaudio.js -->
+    <!-- credit to annasthms -->
+    <!-- https://annasthms.tumblr.com/more/js/customaudio/new -->
+    <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+    <script>
+        //--------- audioplayer
+        $(document).ready(function() {
+            customAudio({
+                post: ".entry",
+                wrappers: {
+                    audio: ".custom_audio_wrapper",
+                    buttons: ".custom_audio_buttons",
+                    duration: ".custom_audio_duration",
+                    timeCurrent: ".custom_audio_current_time",
+                    timeLeft: ".custom_audio_time_left",
+                    seekbar: ".custom_audio_seekbar"
+                },
+                default: false,
+                pauseAll: true,
+                playButton: "<i data-feather='play'></i>",
+                pauseButton: "<i data-feather='pause'></i>",
+                errorIcon: "<i data-feather='x'></i>",
+                hideInfoIfError: true,
+                callAfterLoad: () => {
+                    feather.replace();
+                }
+            }).create();
+        });
+    </script>
+
+
+    <style type="text/css">
+     
+        
+    </style>
+    
+</head> 
+
+<body>
+
+
+    <div class="content">
+
+
+        <div class="entry">
+            <div class="perma-top">
+                <div class="perma-top-">
+                    <a title="gloom">
+                        <div class="ptop-x bxit">
+                            <div class="bxitx">+</div>
+                        </div>
+                    </a>
+                    <div class="ptop-title">
+                        <a title="gloom" "https://nemupanart.tumblr.com/post/179584703859">gloom.zip</a>
+
+                        <div class="pinfo-toptop">
+                            <span class="ptop-notes">19656 mb</span>
+                            <span class="ptop-notes">Feb 7th 3:04</span>
+                        </div>
+                        <!--pinfo-top-->
+
+                    </div>
+                    <!--ptop-title-->
+                </div>
+                <!--perma-top-->
+            </div>
+            <div class="entry-content">
+                <a "#" onclick="Tumblr.Lightbox.init([{ width: 500, height: 397, low_res: 'https://i.ibb.co/g7f4Hvd/tumblr-c45ff76ab159b75c2834a81c5bdf7f8b-9d1889c3-500.gif', high_res: '' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+                    <center><img class="entry-photo" src="https://64.media.tumblr.com/76476fc629e6e90a59ae614e1882e314/61fc24ad3cc8aa2a-46/s640x960/60aab0aa56acb8a4d64486616d8ac461893ea27b.jpg" alt="" /></center>
+                </a>
+
+                <!--captions-->
+
+
+                <!--permalink bottom-->
+
+                <div class="perma-actions">
+                    <div class="actbtn ctrllik">
+                        <div class="like_button" data-post-id="673786884223270912" data-blog-name="" id="like_button_673786884223270912"><iframe id="like_iframe_673786884223270912" src=""
+                                scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_673786884223270912"></iframe></div><span class="likebtnx"></span></div>
+                    <a title="reblog" "">
+                        <div class="actbtn" style="margin-right: -1px;"><i class="cp cp-reblog-alt"></i></div>
+                    </a>
+                    <a title="permalink" href="https://xat.me/Nashe">
+                        <div class="actbtn"><i class="cp cp-bookmark-o"></i></div>
+                    </a>
+                </div>
+                <!--perma-actions-->
+
+                <div class="perma-bot">
+                    <div class="pbot-content">
+                        <div class="pinfo-btm"><span class="pbtm-notesi"> <span class="pbtm-notes-icon"><i data-feather="star"></i></span>pinned</span>
+                        </div>
+                        <div class="pinfo-btm pinfo-btmtop">
+                            <span class="pbtm-notes">19656 mb</span>
+                            <span class="pbtm-notes">Feb 7th 3:06</span>
+                        </div>
+                        <!--pinfo-btm-->
+
+
+
+                        <a "" title="riri">
+                            <div class="pbot-tag">#riri</div>
+                        </a>
+
+                        <a "" title="gloom">
+                            <div class="pbot-tag">#gloom</div>
+                        </a>
+
+                        <a "" title="dark">
+                            <div class="pbot-tag">#dark</div>
+                        </a>
+
+
+
+                    </div>
+                    <!--pbot-content-->
+                </div>
+                <!--perma-bot-->
+
+
+            </div>
+            <!--entry-content-->
+
+        </div>
+        <!--entry-->
+
+
+        <div class="entry">
+            <div class="perma-top">
+                <div class="perma-top-cut">
+                    <a title="sadness" "">
+                        <div class="ptop-x bxit">
+                            <div class="bxitx">+</div>
+                        </div>
+                    </a>
+                    <div class="ptop-title">
+                        <a title="created by nashe" "">momobami.zip</a>
+
+                        <div class="pinfo-toptop">
+                            <span class="ptop-notes">55086 mb</span>
+                            <span class="ptop-notes">Feb 7th 3:15</span>
+                        </div>
+                        <!--pinfo-top-->
+
+                    </div>
+                    <!--ptop-title-->
+                </div>
+                <!--perma-top-->
+            </div>
+            <div class="entry-content">
+                <div class="photoset-grid" photoset-layout="2">
+                    <div data-width="1200" data-height="1300" data-lowres="https://64.media.tumblr.com/a26f6e8b70d446900ec8844cc19ac745/2674184e552e7869-f7/s500x750/f3cf78ab62390f691e9c9d7b3eff4aa009664480.png" data-highres="https://64.media.tumblr.com/caa29efcd3098299f0c862c05134cd6c/17ab0d520e65825c-22/s500x750/928551067d49294623f0310fe1d45575413be973.pnj"
+                        onclick="lightbox(this)"><img src="https://64.media.tumblr.com/caa29efcd3098299f0c862c05134cd6c/17ab0d520e65825c-22/s500x750/928551067d49294623f0310fe1d45575413be973.pnj" /></div>
+                    <div data-width="1200" data-height="1300" data-lowres="https://64.media.tumblr.com/da81acd5981f69c32527b8131e71af12/2674184e552e7869-8f/s500x750/5daf6360c6d8a4bf0209e536ccc043bb09768cef.png" data-highres="https://64.media.tumblr.com/960655c2648a752a26d282d092942aab/61fc24ad3cc8aa2a-bf/s500x750/415800be03693bc24ee5730661ac03eb5cf58136.jpg"
+                        onclick="lightbox(this)"><img src="https://64.media.tumblr.com/960655c2648a752a26d282d092942aab/61fc24ad3cc8aa2a-bf/s500x750/415800be03693bc24ee5730661ac03eb5cf58136.jpg" /></div>
+                </div>
+                <!--captions-->
+
+                <div class="entry-caption">
+
+                    <div class="reblog-block">
+                        <div class="reblogger">
+                            <img class="reblogger-icon" src="https://i.ibb.co/QFXJyZD/Ririka.jpg">
+                            <div class="reblog-txt">
+                                <div class="reblogger-name">
+                                    <a class="reblogger-username" "">nashe</a> </div>
+                                <!--reblogger-name-->
+                                <div class="reblog-comment">
+                                    <div class="entry-body">
+                                        <p>i know you are the one, i wanna keep you around. <br /></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--reblog-txt-->
+                        </div>
+                        <!--reblogger-->
+                    </div>
+                </div>
+                <!--entry-caption-->
+
+
+
+                <!--permalink bottom-->
+
+                <div class="perma-actions">
+                    <div class="actbtn ctrllik">
+                        <div class="like_button" data-post-id="673786886845874176" data-blog-name="xue-oxyg" id="like_button_673786886845874176"><iframe id="like_iframe_673786886845874176" src=""
+                                scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_673786886845874176"></iframe></div><span class="likebtnx"></span></div>
+                    <a title="reblog" "">
+                        <div class="actbtn" style="margin-right: -1px;"><i class="cp cp-reblog-alt"></i></div>
+                    </a>
+                    <a title="permalink" "">
+                        <div class="actbtn"><i class="cp cp-bookmark-o"></i></div>
+                    </a>
+                </div>
+                <!--perma-actions-->
+
+                <div class="perma-bot">
+                    <div class="pbot-content">
+
+                        <div class="pinfo-btm pinfo-btmtop">
+                            <span class="pbtm-notes">55086 mb</span>
+                            <span class="pbtm-notes">Feb 7th 3:20</span>
+                        </div>
+                        <!--pinfo-btm-->
+
+
+
+                        <a "" title="manga">
+                            <div class="pbot-tag">#manga</div>
+                        </a>
+
+                        <a "" title="xoxo">
+                            <div class="pbot-tag">#xoxo</div>
+                        </a>
+
+                        <a "" title="riri">
+                            <div class="pbot-tag">#riri</div>
+                        </a>
+
+                        <a "" title="恋愛中">
+                            <div class="pbot-tag">#恋愛中</div>
+                        </a>
+
+                    </div>
+                    <!--perma-actions-->
+                </div>
+                <!--entry-->
+
+            </div>
+            <!--entry-content-->
+        </div>
+        <!--entry-->
+
+
+        <div class="entry">
+
+            <div class="perma-top">
+                <div class="perma-top-cut">
+                    <a title="pics" "">
+                        <div class="ptop-x bxit">
+                            <div class="bxitx">+</div>
+                        </div>
+                    </a>
+                    <div class="ptop-title">
+                        <a title="created by nashe" "">pics.zip</a>
+
+                        <div class="pinfo-toptop">
+                            <span class="ptop-notes">28415 mb</span>
+                            <span class="ptop-notes">Feb 7th 3:29</span>
+                        </div>
+                        <!--pinfo-top-->
+
+                    </div>
+                    <!--ptop-title-->
+                </div>
+                <!--perma-top-->
+            </div>
+
+            <div class="entry-content">
+
+                <div class="photoset-grid" photoset-layout="3">
+                    <div data-width="300" data-height="300" data-lowres="https://64.media.tumblr.com/64ed4040ea45e72f2cc41d3cc99f617c/f51ffc5feefc771c-72/s1280x1920/389d934b644fd2e6fba2ac9aab5c0b3f04cda6fb.jpg" data-highres="https://64.media.tumblr.com/64ed4040ea45e72f2cc41d3cc99f617c/f51ffc5feefc771c-72/s1280x1920/389d934b644fd2e6fba2ac9aab5c0b3f04cda6fb.jpg"
+                        onclick="lightbox(this)"><img src="https://64.media.tumblr.com/64ed4040ea45e72f2cc41d3cc99f617c/f51ffc5feefc771c-72/s1280x1920/389d934b644fd2e6fba2ac9aab5c0b3f04cda6fb.jpg"></div>
+                    <div data-width="300" data-height="300" data-lowres="https://64.media.tumblr.com/f740cbaf0155697f04946ee667fd3803/f51ffc5feefc771c-bf/s500x750/8fe8bf926131cac6c446ab2d67295b4c04a4ccd6.jpg" data-highres="https://64.media.tumblr.com/f740cbaf0155697f04946ee667fd3803/f51ffc5feefc771c-bf/s500x750/8fe8bf926131cac6c446ab2d67295b4c04a4ccd6.jpg"
+                        onclick="lightbox(this)"><img src="https://64.media.tumblr.com/f740cbaf0155697f04946ee667fd3803/f51ffc5feefc771c-bf/s500x750/8fe8bf926131cac6c446ab2d67295b4c04a4ccd6.jpg"></div>
+                    <div data-width="300" data-height="300" data-lowres="https://64.media.tumblr.com/c76e1a660d97842e25a7c1003c26794d/f51ffc5feefc771c-ad/s540x810/bea6875da07bfc1750f0525e74b2ec0e2b223bd2.jpg" data-highres="https://64.media.tumblr.com/c76e1a660d97842e25a7c1003c26794d/f51ffc5feefc771c-ad/s540x810/bea6875da07bfc1750f0525e74b2ec0e2b223bd2.jpg"
+                        onclick="lightbox(this)"><img src="https://64.media.tumblr.com/c76e1a660d97842e25a7c1003c26794d/f51ffc5feefc771c-ad/s540x810/bea6875da07bfc1750f0525e74b2ec0e2b223bd2.jpg"></div>
+                </div>
+                <div class="entry-caption">
+
+                    <div class="reblog-block">
+                        <div class="reblogger">
+                            <img class="reblogger-icon" src="https://i.ibb.co/QFXJyZD/Ririka.jpg">
+                            <div class="reblog-txt">
+                                <div class="reblogger-name">
+                                    <a class="reblogger-username" "">nashe</a> </div>
+                                <!--reblogger-name-->
+                                <div class="reblog-comment">
+                                    <div class="entry-body">
+                                        <p><b>ririka momobami&nbsp;³
+
+• icons  
+
+•
+
+to use&nbsp;</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--reblog-txt-->
+                        </div>
+                        <!--reblogger-->
+                    </div>
+                </div>
+            </div>
+            <div class="perma-bot">
+                <div class="pbot-content">
+
+                    <div class="pinfo-btm pinfo-btmtop">
+                        <span class="pbtm-notes">28415 mb</span>
+                        <span class="pbtm-notes">Feb 7th 3:37</span>
+                    </div>
+                    <!--pinfo-btm-->
+
+
+
+                    <a "" title="icons" class="">
+                        <div class="pbot-tag">#icons</div>
+                    </a>
+
+                    <a "" title="riri">
+                        <div class="pbot-tag">#riri</div>
+                    </a>
+
+                    <a "" title="manga">
+                        <div class="pbot-tag">#manga</div>
+                    </a>
+
+                    <!--pbot-content-->
+                </div>
+            </div>
+            <!--pbot-content-->
+        </div>
+
+        <div class="entry">
+
+            <div class="perma-top">
+                <div class="perma-top-cut">
+                    <a title="quotes" "">
+                        <div class="ptop-x bxit">
+                            <div class="bxitx">+</div>
+                        </div>
+                    </a>
+                    <div class="ptop-title">
+                        quotes.log
+
+                        <div class="pinfo-toptop">
+                            <span class="ptop-notes">129 mb</span>
+                            <span class="ptop-notes">Feb 8th 2:22</span>
+                        </div>
+                        <!--pinfo-top-->
+
+                    </div>
+                    <!--ptop-title-->
+                </div>
+                <!--perma-top-->
+            </div>
+
+            <div class="entry-content">
+
+
+
+
+
+
+                <div class="entry-content-wrap">
+
+
+                    <div class="chatline chatline-odd"><span class="chatlabel">Antoine de Saint-Exupéry, The Little Prince:</span> “It is only with the heart that one can see rightly; what is essential is invisible to the eye.”</div>
+
+                    <div class="chatline chatline-even"><span class="chatlabel">Mary Shelley, Frankenstein:</span> “Beware; for I am fearless, and therefore powerful.”</div>
+
+                    <div class="chatline chatline-odd"><span class="chatlabel">Harper Lee, To Kill a Mockingbird:</span>“I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It’s when you know you’re licked before you begin but you begin anyway and you see it through no matter what. You rarely win, but sometimes you do.”</div>
+
+                    <div class="chatline chatline-even"><span class="chatlabel"> Betty Smith, A Tree Grows in Brooklyn:</span> “From that time on, the world was hers for the reading. She would never be lonely again, never miss the lack of intimate friends. Books became her friends and there was one for every mood.”</div>
+
+                    <div class="chatline chatline-odd"><span class="chatlabel">Chinua Achebe, Things Fall Apart:</span> “He has put a knife on the things that held us together and we have fallen apart.” </div>
+
+                    <div class="chatline chatline-even"><span class="chatlabel">Miguel de Cervantes, Don Quixote:</span> “When life itself seems lunatic, who knows where madness lies? Perhaps to be too practical is madness. To surrender dreams — this may be madness. Too much sanity may be madness — and maddest of all: to see life as it is, and not as it should be!”</div>
+
+                    <div class="chatline chatline-odd"><span class="chatlabel">Bram Stoker, Dracula:</span> “I am longing to be with you, and by the sea, where we can talk together freely and build our castles in the air.”</div>
+
+                </div>
+                <!--entry-content-wrap-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--captions-->
+
+
+
+
+
+                <!--permalink bottom-->
+
+                <div class="perma-actions">
+                    <div class="actbtn ctrllik">
+                        <div class="like_button" data-post-id="673786645717385216" data-blog-name="xue-oxyg" id="like_button_673786645717385216"><iframe id="like_iframe_673786645717385216" src="" scrolling="no"
+                                width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_673786645717385216"></iframe></div><span class="likebtnx"></span></div>
+                    <a title="reblog" "">
+                        <div class="actbtn" style="margin-right: -1px;"><i class="cp cp-reblog-alt"></i></div>
+                    </a>
+                    <a title="permalink" "">
+                        <div class="actbtn"><i class="cp cp-bookmark-o"></i></div>
+                    </a>
+                </div>
+                <!--perma-actions-->
+
+                <div class="perma-bot">
+                    <div class="pbot-content">
+
+                        <div class="pinfo-btm pinfo-btmtop">
+                            <span class="pbtm-notes">189 mb</span>
+                            <span class="pbtm-notes">Feb 8th 2:27</span>
+                        </div>
+                        <!--pinfo-btm-->
+
+
+
+                        <a "" title="books">
+                            <div class="pbot-tag">#books</div>
+                        </a>
+
+                        <a "" title="quotes">
+                            <div class="pbot-tag">#quotes</div>
+                        </a>
+
+
+
+                    </div>
+                    <!--pbot-content-->
+                </div>
+                <!--perma-bot-->
+
+
+            </div>
+            <!--entry-content-->
+
+        </div>
+        <!--entry-->
+
+
+        <!--entry NUEVO CLEFAIRI-->
+
+
+
+
+
+    </div>
+    <!--pbot-content-->
+    </div>
+    <!--perma-bot-->
+
+
+    </div>
+    <!--entry-content-->
+
+    </div>
+    <!--entry-->
+
+
+
+
+    </div>
+    <!--pbot-content-->
+    </div>
+    <!--perma-bot-->
+
+
+    </div>
+    <!--entry-content-->
+
+    </div>
+    <!--entry-->
+
+
+
+    </div>
+    <!--pbot-content-->
+    </div>
+    <!--perma-bot-->
+
+
+    </div>
+    <!--entry-content-->
+
+    </div>
+    <!--entry-->
+
+
+
+
+    </div>
+    <!--pbot-content-->
+    </div>
+    <!--perma-bot-->
+
+
+    </div>
+    <!--entry-content-->
+
+    </div>
+    <!--entry-->
+
+
+    </div>
+    <!--reblog-txt-->
+    </div>
+    <!--reblogger-->
+    </div>
+    </div>
+    <!--entry-caption-->
+
+
+
+    <!--permalink bottom-->
+
+
+
+
+    </div>
+    <!--pbot-content-->
+    </div>
+    <!--perma-bot-->
+
+
+    </div>
+    <!--entry-content-->
+
+    </div>
+    <!--entry-->
+
+
+
+
+
+    <!-- permalink page -->
+    
+</div><!--content-->
+
+<div class="userprofile">
+
+<div class="up-socials">
+    <a "" title=""><div class="up-smi"><i class="cp cp-instagram-o"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-twitter"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-ko-fi"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-spotify"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-etsy-o"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-twitch"></i></div></a>
+    <a "" title=""><div class="up-smi"><i class="cp cp-tumblr"></i></div></a>
+    </div><!--socials-->
+
+<div class="up-quote"><div class="centrer">“Even if we’re apart, I won’t forget about you.<span class="up-quotem">”</span></div></div>
+
+<div class="up-window2">
+    <div class="up-header">
+        <div class="up-header-w2 bxit"><div class="bxitx">+</div></div>
+        <div class="up-header-title">weekly_schedule.cal</div>
+    </div><!--header-->
+    <div class="w2-upd"><div class="entry-body">
+        <p><i>私がしなければならないこと !</i></p><p><b>monday</b> read a book</p><p><b>tuesday</b> dinner w/ kiwi</p><p><b>wednesday</b> go to the gym</p><p><b>thursday</b> visit the museum</p><p><b>friday</b> rest day</p><p><b>saturday</b> watch love! live</p><p><b>sunday</b> icecream day</p>
+    </div></div>
+</div><!--w2-updates-->
+
+<div class="up-photo">
+<div class="up-pholinkspho">
+    <a ""><div class="pholink">sadness</div></a><a ""><div class="pholink">gloom</div></a><a ""><div class="pholink">death</div></a><a ""><div class="pholink">darkness</div></a>
+</div>
+</div>
+
+<div class="up-window1">
+    <div class="up-header">
+        <div class="up-header-w1 bxit"><div class="bxitx">+</div></div>
+        <div class="up-header-title">user_profile.exe</div>
+    </div><!--header-->
+    
+    <div class="w1-tabs">
+        <div id="w1-prof" class="w1-tab w1-prof-tab w1-tab-active">profile</div>
+        
+        <div id="w1-bio" class="w1-tab w1-bio-tab">bio</div>
+        
+        
+        <div id="w1-todo" class="w1-tab w1-todo-tab">to-do</div>
+        
+    </div><!--w1-tabs-->
+    
+    <div class="w1-panel">
+    
+        <div class="w1p w1p-prof">
+            <div class="prof-basic">
+                <div class="prof-basic-pfp"></div>
+                <div class="prof-basic-info"><div class="centrer"><div class="prof-basic-name">Nashe<div class="prof-basic-subtitle">Lvl 22 Druid</div></div></div></div>
+            </div><!--prof-basic-->
+            <div class="prof-stats">
+                
+                
+                <div class="pstat">
+                    <div class="pstat-done">25%</div>
+                    <div class="pstat-name">Strength</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf1"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+            
+                
+                <div class="pstat">
+                    <div class="pstat-done">65%</div>
+                    <div class="pstat-name">Defense</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf2"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+            
+                
+                <div class="pstat">
+                    <div class="pstat-done">70%</div>
+                    <div class="pstat-name">Intelligence</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf3"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+            
+                
+                <div class="pstat">
+                    <div class="pstat-done">80%</div>
+                    <div class="pstat-name">Agility</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf4"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+            
+                
+                <div class="pstat">
+                    <div class="pstat-done">15%</div>
+                    <div class="pstat-name">Luck</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf5"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+            
+                
+                <div class="pstat">
+                    <div class="pstat-done">35%</div>
+                    <div class="pstat-name">Intuition</div>
+                    <div class="pstat-bar">
+                        <div class="pstat-barfill psbf6"></div>
+                        <div class="pstato"></div>
+                    </div><!--pstat-bar-->
+                </div><!--pstat-->
+                
+                
+            </div><!--prof-stats-->
+        </div><!--w1p--><!--w1p-prof-->
+        
+        
+        <div class="w1p w1p-bio w1p-hide">
+            <div class="w1p-title">thoughts</div>
+            <div class="w1p-space">
+            <div class="bio"><p>人生は続くに違いないと思います。 <i>人生はきれいです</i> ではない？
+</p><p><b>We all have life storms,</b> and when we get the rough <a title="good luck studying!">times and we recover</a> from them, we should </p><blockquote>celebrate that we got through it.</blockquote><p>No matter how bad it may seem, <a "">there's always something beautiful</a> that you can find.</p><p><script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5670606";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=&e2=&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script>
+ <script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3367716";
+fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=gamers&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
+</script></div>
+            </div><!--w1p-space-->
+        </div><!--w1p-->
+        
+        
+        
+        <div class="w1p w1p-todo w1p-hide">
+            <div class="w1p-title">to-do list</div>
+            <div class="w1p-space w1p-space-todo">
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">graduate from uni</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-100"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">become a good nurse</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-100"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">help others</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">learn a third language</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">travel to different places</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">learn how to play videogames</div>
+                </div><!--td-item-->
+                
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-100"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">read all harry potter books</div>
+                </div><!--td-item-->
+                
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">keep on being a gym rat</div>
+                </div><!--td-item-->
+                
+                <div class="td-item">
+                    <div class="td-icon">
+                        <div class="td-icon-100"></div>
+                    </div><!--td-icon-->
+                    <div class="td-name">do some cosplays</div>
+                </div><!--td-item-->
+                
+            </div><!--w1p-space-->
+        </div><!--w1p-todo-->
+        
+        
+    </div><!--w1-panel-->
+    
+</div><!--up-window1-->
+
+</div><!--userprofile-->
+
+
+<div class="controlside">
+
+<div class="ps-buttons">
+
+<a "/" title="hate it here"><div class="psbtn psbtn-tri"><div class="ps-in">
+    <div class="ps-symbol ps-symconsole">
+        <div class="ps-tri1"></div>
+        <div class="ps-tri2"></div>
+        <div class="ps-tri3"></div>
+    </div><!--ps-symbol-->
+    <div class="ps-navicon ps-naviconsole">
+        <i data-feather="home"></i>
+    </div>
+</div><!--ps-in--></div><!--psbtn--></a>
+
+
+<a "" title="darkness"><div class="psbtn psbtn-sq"><div class="ps-in">
+    <div class="ps-symbol ps-symconsole">
+        <div class="ps-sq"></div>
+    </div><!--ps-symbol-->
+    <div class="ps-navicon ps-naviconsole">
+        <i data-feather="mail"></i>
+    </div>
+</div><!--ps-in--></div><!--psbtn--></a>
+
+
+<a "" title="peace out"><div class="psbtn psbtn-cir"><div class="ps-in">
+    <div class="ps-symbol ps-symconsole">
+        <div class="ps-cir"></div>
+    </div><!--ps-symbol-->
+    <div class="ps-navicon ps-naviconsole">
+        <i data-feather="calendar"></i>
+    </div>
+</div><!--ps-in--></div><!--psbtn--></a>
+
+
+<a "" title="death wish"><div class="psbtn psbtn-x"><div class="ps-in">
+    <div class="ps-symbol ps-symconsole">
+        <div class="ps-x1"></div>
+        <div class="ps-x2"></div>
+    </div><!--ps-symbol-->
+    <div class="ps-navicon ps-naviconsole">
+        <i data-feather="gift"></i>
+    </div>
+</div><!--ps-in--></div><!--psbtn--></a>
+
+</div><!--ps-buttons-->
+
+<div class="ps-pm"><!--plusminus-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div><!--ps-pm-->
+
+</div><!--controlside-->
+
+
+
+<div class="sidebar">
+    
+    
+    <div class="stk1"></div>
+    <div class="stk2"></div>
+    
+    
+    <div class="sb-imgprof">
+        <div class="sb-img"></div>
+    </div><!--sb-imgprof-->
+    
+    <div class="sb-info">
+    <div class="sb-title">
+        <div class="sb-exit bxit"><div class="bxitx"> +</div></div>
+        nashe.txt</div><!--sb-title-->
+    
+    <div class="sb-floatee">
+    <a id="btn-info" title="user profile"><div class="sbf-fol">+</div></a>
+        <img class="sbf-pfp" src="https://i.ibb.co/QFXJyZD/Ririka.jpg">
+        <div class="sbf-info"><div class="centrer">
+            <div class="sbf-name">@Nashe</div>
+            <!--<div class="sbf-oneline">flower warlock</div>-->
+            
+            <div class="sbf-stat sbf-stat-hp">
+                <div class="sbf-statname">BA</div>
+                <div class="sbf-bar"><div class="sbf-barfill"></div></div>
+            </div><!--sbf-stat-->
+            
+            <div class="sbf-stat sbf-stat-sp">
+                <div class="sbf-statname">GB</div>
+                <div class="sbf-bar"><div class="sbf-barfill"></div></div>
+            </div><!--sbf-stat-->
+            
+        </div></div><!--sbf-info-->
+    </div><!--sb-floatee-->
+        
+    <div class="sb-desc">
+        <div class="entry-body">I do not fear death.<b> I had been dead for billions and billions of years before I was born,<b> and had not <a "">suffered the</a> slightest inconvenience from it.</div>
+        
+        <div class="sb-linkspho">
+            
+            <a "">death</a>
+            
+            <a "">gloom</a>
+            
+            <a "">manga</a>
+            
+            <a "">xat</a>
+            
+        </div>
+        
+        
+        <form action="" method="">
+        <input type="text" id="q-searchbar" name="q" placeholder="search..." value="" autocomplete="off"/>
+        </form>
+        
+        
+    </iv><!--sb-desc-->
+    </div><!--sb-info-->
+    
+    
+    <div class="stk3"></div>
+    <div class="stk4"></div>
+    
+    
+</div><!--sidebar-->
+
+
+<a title="by nashe" href="https://xat.me/Nashe"><div style="position:fixed;bottom:12px;right:12px;font-size:10px;letter-spacing:1px;background-color:#676767;color:#fff;padding: 4px 7px;border-radius:5px;cursor:pointer;"> ♡</div></a> 
+      </div>
+
+  <!-------MUSIC PLAYER BY GLENTHEMES------->
+<div class="glenjams-06">
+<div class="pasta">
+   <div class="vinyl"></div>
+   <div class="music-controls">
+       <div class="playy"><i data-feather="play"></i></div>
+       <div class="pausee"><i data-feather="pause"></i></div>
+   </div>
+   <div class="music-title">Agora Hills</div>
+
+   <audio id="audio" src="https://www.dropbox.com/scl/fi/735fdfe5wm7iyns5nmkan/Agora_Hills.mp3?rlkey=hl0925n6ohf2t0chbtuxl6081&dl=1" type="audio"></audio>
+</div><!--pasta-->
+</div><!--glenjams-06-->
+<!----end music player---->
+      <script>feather.replace()</script>
+</body> 
+ 
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
